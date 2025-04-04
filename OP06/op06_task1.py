@@ -11,8 +11,10 @@ def save_to_file(file_name, text_to_save, rewrite):
         file.write(text_to_save)
 
 file_name=inputs.safe_input_file_name("Введите имя файла (без расширения): ")+".txt"
-text = str(input("Введите текст, который хотите записать в файл: "))
-print("Перезаписать файл? (Y/N) Если выбрать N, текст допишется в конец файла с переносом строки")
+message="Введите текст, который хотите записать в файл: "
+text = str(input(message))
+message = "Перезаписать файл? (Y/N) Если выбрать N, текст допишется в конец файла с переносом строки"
+print(message)
 fl_rewrite = (str(input(": "))=="Y")
 
 save_to_file(file_name, text, fl_rewrite)
