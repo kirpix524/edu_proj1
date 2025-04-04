@@ -10,7 +10,8 @@ def save_to_file(file_name, text_to_save, rewrite):
     with open(file_name, par_rew) as file:
         file.write(text_to_save)
 
-file_name=inputs.safe_input_file_name("Введите имя файла (без расширения): ")+".txt"
+question = "Введите имя файла (без расширения): "
+file_name=inputs.safe_input_file_name(question)+".txt"
 message="Введите текст, который хотите записать в файл: "
 text = str(input(message))
 message = "Перезаписать файл? (Y/N) Если выбрать N, текст допишется в конец файла с переносом строки"
